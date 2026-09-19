@@ -1,0 +1,18 @@
+[project]
+name = "texttospeechapi"
+version = "0.1.0"
+description = "A simple local text-to-speech API for macOS"
+readme = "README.md"
+authors = [
+    { name = "kkyian", email = "kkyian@icloud.com" }
+]
+requires-python = ">=3.14"
+dependencies = ["flask>=3.1,<4", "waitress>=3,<4", "python-dotenv>=1,<2"]
+
+[project.scripts]
+texttospeechapi = "texttospeechapi:main"
+tts-create-key = "texttospeechapi:create_key"
+
+[build-system]
+requires = ["uv_build>=0.12.7,<0.13.0"]
+build-backend = "uv_build"
